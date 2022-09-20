@@ -1,0 +1,54 @@
+---
+import Navbar from "../components/navbar";
+import Footer from '../components/footer.jsx';
+
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<title>Welcome</title>
+		<!-- Font Awesome -->	
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+		<!-- Google Font -->
+		<link href="https://fonts.googleapis.com/css?family=Bai+Jamjuree:200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic" rel="stylesheet" />
+		<meta name="generator" content={Astro.generator} />
+	</head>
+	<body>
+		<Navbar client:load />
+		<slot />
+		<Footer />
+	</body>
+</html>
+<style is:global>
+	body {
+		font-family: roboto, Bai Jamjuree, sans-serif;
+	}
+	.headerbg {
+		background: linear-gradient(311.76deg, #D4E7FE -15.24%, #FFFFFF 78.85%);
+	}
+	.navbarbg {
+		background-color: #D4E7FE;
+	}
+	.aboutbg {
+		background-color: #d4e7fe;
+	}
+	.servicebg {
+		background: #d4e7fe;
+
+	}
+	.navbutton {
+		background-color: black;
+		color: white;
+	}
+	.p-text {
+		color: rgb(150, 145, 145);
+	}
+	.featuretxt {
+		font-family: Bai Jamjuree;
+	}
+</style>
